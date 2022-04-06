@@ -1,0 +1,31 @@
+{
+	"sProcessing":     "<strong>Procesando...</strong>",
+	"sLengthMenu":     "<strong>Mostrar _MENU_ registros</strong>",
+	"sZeroRecords":    "<strong>No se encontraron resultados</strong>",
+	"sEmptyTable":     "<strong>Ningún dato disponible en esta tabla</strong>",
+	"sInfo":           "<strong>Mostrando registros del _START_ al _END_ de un total de _TOTAL_ registros</strong>",
+	"sInfoEmpty":      "<strong>Mostrando registros del 0 al 0 de un total de 0 registros</strong>",
+	"sInfoFiltered":   "<strong>(filtrado de un total de _MAX_ registros)</strong>",
+	"sInfoPostFix":    "",
+	"sSearch":         "<strong> Buscar </strong><i class ='fab fa-searchengin'></i>",
+	"sUrl":            "",
+	"sInfoThousands":  ",",
+	"sLoadingRecords": "<strong>Cargando...</strong>",
+	"oPaginate": {
+		"sFirst":      "<i class='fas fa-backward'></i>",
+		"sLast":       "<i class='fas fa-forward'></i>",
+		"sNext":       "<i class='fas fa-step-forward'></i>",
+		"sPrevious":   "<i class='fas fa-step-backward'></i>"
+	},
+	"oAria": {
+		"sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+		"sSortDescending": ": Activar para ordenar la columna de manera descendente"
+	},
+	"select": {
+		"rows": {
+			"_": "Seleccionados %d registros",
+			"0": "",
+			"1": "Seleccionados 1 registro"
+		}
+	}
+}
