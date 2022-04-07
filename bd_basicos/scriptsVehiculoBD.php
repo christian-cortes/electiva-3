@@ -3,6 +3,10 @@
 	$("#modalVehiculo").draggable({
 		handle: ".modal-header"
 	});
+	// Bootstrap Color Picker
+	$('#cp3').colorpicker({
+		format: 'hex'
+	});
 	function resetModalForm( idModal = null, idButton = null ) {
 		if ( idModal != '' ) {
 			idModal = '#'+idModal;
@@ -72,7 +76,7 @@
 									$('#idVehiculo').val(data.id);
 									$('#modeloVehiculo').val(data.modelo);
 									$('#referenciaVehiculo').val(data.referencia);
-									$('#colorVehiculo').val(data.color);
+									$('#colorVehiculo').val(data.color).trigger('change');
 									$('#placaVehiculo').val(data.placa);
 									$('#marcaVehiculo').val(data.marca);
 									$('#precioVehiculo').val(data.precio).trigger('keyup');

@@ -1,3 +1,4 @@
+	<?php $marcas = queryVehiculos(7) ?>
 	<!--Modal Vehiculo-->
 	<div class="modal fade" role="dialog"  id="modalVehiculo" aria-labelledby="modalVehiculo" aria-hidden="true">
 		<div class="modal-dialog modal-lg">
@@ -31,7 +32,12 @@
 								<label class="text-light" for="colorVehiculo">
 									Color <i class="fas fa-palette"></i>
 								</label>
-								<input type="text" class="form-control dark-mode" id="colorVehiculo" name="colorVehiculo" required>
+								<div id="cp3" class="input-group">
+									<input type="text" class="form-control form-color dark-mode" id="colorVehiculo" name="colorVehiculo" required>
+									<span class="input-group-append">
+										<span class="input-group-text colorpicker-input-addon"><i></i></span>
+									</span>
+								</div>
 							</div>
 							<div class="form-group col-6">
 								<label class="text-light" for="placaVehiculo">
@@ -45,7 +51,14 @@
 								<label class="text-light" for="marcaVehiculo">
 									Marca <i class="fas fa-car"></i>
 								</label>
-								<input type="text" class="form-control dark-mode" id="marcaVehiculo" name="marcaVehiculo" required>
+								<input type="text" class="form-control dark-mode" id="marcaVehiculo" name="marcaVehiculo" list="marcasVehiculos" required>
+								<datalist id="marcasVehiculos">
+									<?php foreach($marcas as $row):?>
+										<option value="<?=$row->nombre?>">
+											<?=$row->nombre?>
+										</option>
+									<?php endforeach?>
+								</datalist>
 							</div>
 							<div class="form-group col-6">
 								<label class="text-light" for="precioVehiculo">

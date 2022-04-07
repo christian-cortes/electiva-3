@@ -22,4 +22,5 @@
 		}
 		return $array;
 	}
+	session_start();
 ?>

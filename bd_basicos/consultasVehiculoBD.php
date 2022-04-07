@@ -18,21 +18,35 @@
 					$data['modelo'], $data['referencia'], $data['color'], $data['placa'], $data['marca'], $data['precio']
 				]);
 				$result = $mysqli->lastInsertId();
+				if ( $result > 0 ) {
+					$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha guardado correctamente el vehículo', 'success')</script>";
+				}
 				break;
 			case 4:
 				$result = $mysqli->prepare("UPDATE vehiculos SET modelo=?, referencia=?, color=?, placa=?, marca=?, precio=? WHERE id=?")->execute([
 					$data['modelo'], $data['referencia'], $data['color'], $data['placa'], $data['marca'], $data['precio'], $id
 				]);
+				$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha actualizado correctamente el vehículo', 'success')</script>";
 				break;
 			case 5:
 				$result = $mysqli->prepare("UPDATE vehiculos SET estado=? WHERE id=?")->execute([
 					$data['estado'], $id
 				]);
+				if ( $data['estado'] ) {
+					$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha activado correctamente el vehículo', 'success')</script>";
+				} else {
+					$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha desactivado correctamente el vehículo', 'info')</script>";
+				}
 				break;
 			case 6:
 				$result = $mysqli->prepare("UPDATE vehiculos SET eliminado=? WHERE id=?")->execute([
 					date("Y-m-d H:i"), $id
 				]);
+				$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha eliminado correctamente el vehículo', 'warning')</script>";
+				break;
+			case 7:
+				$query  = $mysqli->query("SELECT * FROM marcas WHERE eliminado IS NULL");
+				$result = $query->fetchAll(PDO::FETCH_OBJ);
 				break;
 		}
 		return $result;

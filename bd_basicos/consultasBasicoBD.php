@@ -18,21 +18,31 @@
 					$data['nombres'], $data['apellidos'], $data['email']
 				]);
 				$result = $mysqli->lastInsertId();
+				if ( $result > 0 ) {
+					$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha guardado correctamente el usuario', 'success')</script>";
+				}
 				break;
 			case 4:
 				$result = $mysqli->prepare("UPDATE usuarios SET nombres=?, apellidos=?, email=? WHERE id=?")->execute([
 					$data['nombres'], $data['apellidos'], $data['email'], $id
 				]);
+				$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha actualizado correctamente el usuario', 'success')</script>";
 				break;
 			case 5:
 				$result = $mysqli->prepare("UPDATE usuarios SET estado=? WHERE id=?")->execute([
 					$data['estado'], $id
 				]);
+				if ( $data['estado'] ) {
+					$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha activado correctamente el usuario', 'success')</script>";
+				} else {
+					$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha desactivado correctamente el usuario', 'info')</script>";
+				}
 				break;
 			case 6:
 				$result = $mysqli->prepare("UPDATE usuarios SET eliminado=? WHERE id=?")->execute([
 					date("Y-m-d H:i"), $id
 				]);
+				$_SESSION["alerta"] = "<script>swal('Hecho!!', 'Se ha eliminado correctamente el usuario', 'warning')</script>";
 				break;
 		}
 		return $result;

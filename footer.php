@@ -10,6 +10,8 @@
 	<!-- DATE TIME PICKER FLATPICKR-->
 	<script src="<?=base_url()?>/assets/libraries/flatpickr/dist/flatpickr.js"></script>
 	<script src="<?=base_url()?>/assets/libraries/flatpickr/dist/l10n/es.js"></script>
+	<!-- BOOTSTRAP COLOR PICKER -->
+	<script src="<?=base_url()?>/assets/libraries/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
 	<!-- MOMENT JS-->
 	<script src="<?=base_url()?>/assets/libraries/moment/min/moment-with-locales.js"></script>
 	<script src="<?=base_url()?>/assets/libraries/moment/min/es.js"></script>
@@ -33,6 +35,10 @@
 	<script src="<?=base_url()?>/assets/libraries/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- SWEET ALERT-->
 	<script src="<?=base_url()?>/assets/js/custom.js"></script>
+<?php if ( !empty( $_SESSION["alerta"] ) ) :?>
+	<?=$_SESSION["alerta"]?>
+	<?php unset($_SESSION["alerta"])?>
+<?php endif?>
 <?php if ( !empty( $scripts ) ) :?>
 	<?php include( $scripts)?>
 <?php else:?>

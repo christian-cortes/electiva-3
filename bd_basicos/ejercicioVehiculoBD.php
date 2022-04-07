@@ -27,7 +27,7 @@
 								<td class='font-weight-bold'><?=$row->id?></td>
 								<td><?=$row->modelo?></td>
 								<td><?=$row->referencia?></td>
-								<td><?=$row->color?></td>
+								<td> <i class="fas fa-square" style="color: <?=$row->color?>;"></i> </td>
 								<td><?=$row->placa?></td>
 								<td><?=$row->marca?></td>
 								<td>$ <?=number_format($row->precio, 0)?></td>

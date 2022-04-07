@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="<?=base_url()?>/assets/libraries/@fortawesome/css/fontawesome.css">
 	<!-- BOOTSTRAP SELECT -->
 	<link rel="stylesheet" href="<?=base_url()?>/assets/libraries/bootstrap-select/dist/css/bootstrap-select.min.css">
+	<!-- BOOTSTRAP COLOR PICKER -->
+	<link rel="stylesheet" href="<?=base_url()?>/assets/libraries/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css"/>
 	<!-- DATE TIME PICKER FLATPICKR-->
 	<link rel="stylesheet" href="<?=base_url()?>/assets/libraries/flatpickr/dist/themes/dark.css"/>
 	<!-- JQuery UI -->
