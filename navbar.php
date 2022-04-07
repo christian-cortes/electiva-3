@@ -64,6 +64,9 @@
 							<a class="dropdown-item" href="<?=base_url()?>/bd_basicos/ejercicioBasicoBD.php">
 								Básico BD
 							</a>
+							<a class="dropdown-item" href="<?=base_url()?>/bd_basicos/ejercicioVehiculoBD.php">
+								Vehículo BD
+							</a>
 						</div>
 					</li>
 				</ul>
