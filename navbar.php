@@ -69,6 +69,16 @@
 							</a>
 						</div>
 					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="ejerciciosBDs" role="button" data-toggle="dropdown" aria-expanded="false">
+							Ejercicios Git
+						</a>
+						<div class="dropdown-menu" aria-labelledby="ejerciciosBDs">
+							<a class="dropdown-item" href="<?=base_url()?>/ejercicios_git/ejercicioGit.php">
+								Básico Git
+							</a>
+						</div>
+					</li>
 				</ul>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
